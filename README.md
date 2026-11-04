@@ -1,9 +1,17 @@
-# TETRIS — The Block-Stacking Simulator of Your (Mis)Spent Youth
+# THE WELL — The Block-Stacking Simulator of Your (Mis)Spent Youth
 
 **100% terminal. 0% graphics card. 100% panic when the I-piece arrives.**
 
 Written in C++17 with ncurses. Pairs beautifully with your 1987 monitor, your
-Herman Miller chair, and a lifetime supply of existential dread.
+Herman Miller chair, and a lifetime supply of existential dread. This is the
+terminal edition; the native macOS sibling lives
+[over here](https://github.com/fpwp2n2ks4-stack/TheWellBySwift).
+
+It's Tetris — the game Alexey Pajitnov assembled out of four-square blocks
+and pure Elektronika 60 patience in 1984. Why "The Well"? Because that's
+what the 10×20 playfield has always been called, and because Tetris™ is a
+trademark of Tetris Holding, LLC. The gameplay is an homage; the name is
+theirs; the well is everyone's.
 
 ---
 
@@ -27,21 +35,21 @@ You will need:
   anyway.
 
 ```sh
-make          # builds ./tetris
-make tests    # builds ./tetris_tests, the unit-test armada
-./tetris      # crank it up
+make          # builds ./well
+make tests    # builds ./well_tests, the unit-test armada
+./well        # crank it up
 ```
 
 `make clean` erases everything, because that's what we do with feelings.
 
 > **Warning:** building this software may induce nostalgia. Side effects
-> include humming the Tetris theme at 3 a.m. and refusing to rotate any
+> include humming the Korobeiniki at 3 a.m. and refusing to rotate any
 > physical object left unless you have enough room for a wall kick.
 
 ## Running it
 
 ```
-$ ./tetris
+$ ./well
 ```
 
 That's it. There is no save state, no cloud sync, no battle pass. Just you,
@@ -111,7 +119,7 @@ knew that. This is why we can't have nice things.
 ## Testing
 
 ```sh
-make tests && ./tetris_tests
+make tests && ./well_tests
 ```
 
 A small army of unit tests guards the game logic like mall security: seven-bag
@@ -135,9 +143,18 @@ the healthiest relationship in this repo.
 
 ## License & legacy
 
-This project is a loving homage to a 1984 phenomenon that will outlive us
-all. No actual Alexey Pajitnov pixels were harmed. No floppy disks were
-required. Your youth is not included — you already spent it.
+MIT. This project is a loving homage to a 1984 phenomenon that will outlive
+us all — and to Alexey Pajitnov, who wrote it on a Soviet computer with no
+idea it would still be stacked, rotated and sworn at four decades later.
+No actual Pajitnov pixels were harmed. No floppy disks were required. Your
+youth is not included — you already spent it.
+
+> **Legal note:** Tetris is a trademark of Tetris Holding, LLC — the same
+> folks who once Cease-&-Desisted Quinn, the quintessential Mac Tetris, out
+> of existence. This is a non-commercial open-source homage, named after its
+> 10×20 home and nothing else. Don't sell it, don't name-drop the trademark
+> in a store listing, and keep your lawyer's number handy like a spare
+> I-piece.
 
 ---
 

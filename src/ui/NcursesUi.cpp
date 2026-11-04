@@ -616,7 +616,7 @@ int NcursesUi::showMainMenu() {
 
         clear();
         attron(A_BOLD);
-        printw("TETRIS\n");
+        printw("THE WELL\n");
         attroff(A_BOLD);
         printw("\n");
         for (int i = 0; i < count; ++i) {

@@ -1,4 +1,4 @@
-// TETRIS — point d'entrée du programme.
+// THE WELL — point d'entrée du programme.
 //
 // Relie le modèle de jeu pur à l'interface ncurses et aux deux couches de
 // stockage, puis exécute la boucle principale : menu -> partie -> écran de

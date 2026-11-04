@@ -1,11 +1,11 @@
-# Makefile de TETRIS.
+# Makefile de THE WELL.
 #
-#   make          -> compile ./tetris
-#   make tests    -> compile ./tetris_tests (tests unitaires)
+#   make          -> compile ./well
+#   make tests    -> compile ./well_tests (tests unitaires)
 #   make clean    -> supprime les binaires et le répertoire build/
 #
 # Le modèle de jeu (src/game, src/storage) est partagé entre le jeu et les
-# tests ; seule l'interface ncurses (src/ui) est propre au binaire tetris.
+# tests ; seule l'interface ncurses (src/ui) est propre au binaire well.
 
 CXX      := clang++
 CXXFLAGS := -std=c++17 -Wall -Wextra -Wpedantic -Wno-unused-parameter -Wshadow -Wconversion -Wsign-conversion -Wold-style-cast -Wformat=2 -Wuninitialized -Wimplicit-fallthrough -O2 -Isrc
@@ -26,15 +26,15 @@ TEST_SRC  := tests/test_main.cpp
 CORE_OBJS := $(patsubst src/%.cpp,$(BUILD)/%.o,$(CORE_SRCS))
 UI_OBJS   := $(patsubst src/%.cpp,$(BUILD)/%.o,$(UI_SRCS))
 
-all: tetris
+all: well
 
 # Binaire du jeu : modèle + stockage + interface ncurses + point d'entrée.
-tetris: $(CORE_OBJS) $(UI_OBJS) $(BUILD)/main.o
+well: $(CORE_OBJS) $(UI_OBJS) $(BUILD)/main.o
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDLIBS)
 
 # Binaire de tests : modèle + stockage, sans interface.
 tests: $(CORE_OBJS) $(BUILD)/test_main.o
-	$(CXX) $(CXXFLAGS) -o tetris_tests $^ $(LDLIBS)
+	$(CXX) $(CXXFLAGS) -o well_tests $^ $(LDLIBS)
 
 # Compilation générique des sources de src/ vers build/.
 $(BUILD)/%.o: src/%.cpp
@@ -46,6 +46,6 @@ $(BUILD)/test_main.o: $(TEST_SRC)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(BUILD) tetris tetris_tests tetris.o
+	rm -rf $(BUILD) well well_tests well.o
 
 .PHONY: all tests clean
